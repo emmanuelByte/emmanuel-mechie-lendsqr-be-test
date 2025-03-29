@@ -1,6 +1,6 @@
 import { Knex } from "knex";
 import * as dotenv from "dotenv";
-import config from "./src/config/config";
+import config from "./config/config";
 
 dotenv.config();
 
