@@ -1,9 +1,9 @@
 import knex from "knex";
 import dotenv from "dotenv";
-import config from "../knexfile";
+import knexConfig from "../../knexfile";
 
 dotenv.config();
 
-const db = knex(config.development);
+const db = knex(knexConfig.development);
 
 export default db;
