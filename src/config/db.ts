@@ -1,9 +1,19 @@
 import knex from "knex";
 import dotenv from "dotenv";
-const knexConfig = require("../../knexfile");
 
 dotenv.config();
-
-const db = knex(knexConfig.development);
+const environment = process.env.NODE_ENV || "development";
+const db = knex({
+  client: "mysql2",
+  connection: {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  },
+  migrations: {
+    directory: "./src/migrations",
+  },
+});
 
 export default db;

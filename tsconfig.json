@@ -9,5 +9,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*", "knexfile.ts"] // ✅ Ensure knexfile is compiled too
+  "include": ["src/**/*", "knexfile.jse.ts"] // ✅ Ensure knexfile is compiled too
 }
